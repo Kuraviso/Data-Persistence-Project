@@ -31,13 +31,13 @@ public class GameMainManager : MonoBehaviour
         data.score = score;
 
         string json = JsonUtility.ToJson(data);
-        File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
+        File.WriteAllText(Application.persistentDataPath + "/savefile1.json", json);
 
     }
 
     public void LoadHighscore()
     {
-        string path = Application.persistentDataPath + "/savefile.json";
+        string path = Application.persistentDataPath + "/savefile1.json";
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
